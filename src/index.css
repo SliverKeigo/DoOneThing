@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color-light: #f8fafc;
+  --bg-color-dark: #1e293b;
+  --text-color-light: #1e293b;
+  --text-color-dark: #f8fafc;
+  --ring-color-light: #38bdf8;
+  --ring-color-dark: #0ea5e9;
+  --button-bg-light: #38bdf8;
+  --button-bg-dark: #0ea5e9;
+  --button-text-light: #f8fafc;
+  --button-text-dark: #1e293b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --ring-color: var(--ring-color-dark);
+    --button-bg: var(--button-bg-dark);
+    --button-text: var(--button-text-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --ring-color: var(--ring-color-light);
+    --button-bg: var(--button-bg-light);
+    --button-text: var(--button-text-light);
+  }
 }
